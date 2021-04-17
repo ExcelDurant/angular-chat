@@ -1,9 +1,9 @@
 <!-- Top navigation -->
-<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+<!-- <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
     <a class="navbar-brand col-sm-3 col-md-2 mr-0">
       <img class="brand-logo" src="assets/logo-positronx-white.svg" alt="positronX.io Logo">
     </a>
-  </nav>
+  </nav> -->
   
   <!-- Sidebar navigation -->
   <div class="container-fluid">
@@ -55,3 +55,24 @@
   
     </div>
   </div>
+
+  <section class="chat-sec">
+    <h2 class="chat-title">chat</h2>
+    <div class="chat-container">
+      <div class="msg-container">
+        <ul class="msg-list">
+          <li class="single-msg">this is a test message</li>
+          <li class="single-msg">this is a test message</li>
+          <li class="single-msg">this is a test message</li>
+          <li class="single-msg">this is a test message</li>
+          <li class="single-msg">this is a test message</li>
+          <li class="single-msg">this is a test message</li>
+          <li class="single-msg">this is a test message</li>
+        </ul>
+      </div>
+      <div class="input-container">
+        <input type="text" name="message" id="message" placeholder="enter a message......" class="msg-field" #message>
+        <button class="send-btn" (click)="sendMessage(message.value)">send</button>
+      </div>
+    </div>
+  </section>
