@@ -1,9 +1,9 @@
 <!-- Top navigation -->
-<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+<!-- <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
     <a class="navbar-brand col-sm-3 col-md-2 mr-0">
       <img class="brand-logo" src="assets/logo-positronx-white.svg" alt="positronX.io Logo">
     </a>
-  </nav>
+  </nav> -->
   
   <!-- Sidebar navigation -->
   <div class="container-fluid">
@@ -55,3 +55,22 @@
   
     </div>
   </div>
+
+  <section class="chat-sec">
+    <h2 class="chat-title">chat</h2>
+    <div class="chat-container">
+      <div class="msg-container" #scrollMe [scrollTop]="scrollMe.scrollHeight">
+        <!--     LOADER WHEN THERE IS NO MESSAGES     -->
+        <div class="donutSpinner" *ngIf="!messages"></div>
+        <!--            ..........                     -->
+
+        <ul class="msg-list">
+          <li class="single-msg" *ngFor="let message of messages"><span class="msg-author">{{message.author}}</span> said: <span class="msg-txt">{{ message.text }} <span class="txt-time">at {{ message.time }}</span></span></li>
+        </ul>
+      </div>
+      <form (ngSubmit)="sendMessage()" [formGroup]="messageForm" class="input-container">
+        <input type="text" name="message" id="message" placeholder="enter a message......" class="msg-field" required formControlName= "message">
+        <button type="submit" class="send-btn" [disabled]="!messageForm.valid">send</button>
+      </form>
+    </div>
+  </section>
