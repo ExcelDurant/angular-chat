@@ -61,13 +61,7 @@
     <div class="chat-container">
       <div class="msg-container">
         <ul class="msg-list">
-          <li class="single-msg">this is a test message</li>
-          <li class="single-msg">this is a test message</li>
-          <li class="single-msg">this is a test message</li>
-          <li class="single-msg">this is a test message</li>
-          <li class="single-msg">this is a test message</li>
-          <li class="single-msg">this is a test message</li>
-          <li class="single-msg">this is a test message</li>
+          <li class="single-msg" *ngFor="let message of messages"><span class="msg-author">{{message.author}}</span> said: <span class="msg-txt">{{ message.text }}</span></li>
         </ul>
       </div>
       <div class="input-container">

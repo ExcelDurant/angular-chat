@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
+import { Message } from './message';
 
 @Injectable({
   providedIn: 'root'
@@ -7,17 +8,17 @@ import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
 export class ChatService {
 
   private dbPath = '/messages';
-  messagesRef:AngularFireList<any> | undefined;
+  messagesRef:AngularFireList<any>;
 
   constructor(private db: AngularFireDatabase) { 
     this.messagesRef = db.list(this.dbPath);
    }
 
-   getAlMessages() {
+   getAllMessages() {
      return this.messagesRef;
    }
 
-   sendMessage(message:any) {
+   sendMessage(message:Message) {
      this.messagesRef?.push(message);
    }
 }

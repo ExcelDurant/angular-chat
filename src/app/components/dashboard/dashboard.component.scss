@@ -27,7 +27,15 @@
             .msg-list{
                 list-style: none;
                 .single-msg {
-                    font-size: 30px;
+                    font-size: 14px;
+                    .msg-author {
+                        font-size: 14px;
+                        color: gray;
+                    }
+                    .msg-txt {
+                        font-weight: 500;
+                        font-size: 30px;
+                    }
                 }
                 .single-msg:nth-of-type(even) {
                     text-align: right;
