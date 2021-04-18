@@ -59,7 +59,11 @@
   <section class="chat-sec">
     <h2 class="chat-title">chat</h2>
     <div class="chat-container">
-      <div class="msg-container">
+      <div class="msg-container" #scrollMe [scrollTop]="scrollMe.scrollHeight">
+        <!--     LOADER WHEN THERE IS NO MESSAGES     -->
+        <div class="donutSpinner" *ngIf="!messages"></div>
+        <!--            ..........                     -->
+
         <ul class="msg-list">
           <li class="single-msg" *ngFor="let message of messages"><span class="msg-author">{{message.author}}</span> said: <span class="msg-txt">{{ message.text }} <span class="txt-time">at {{ message.time }}</span></span></li>
         </ul>
