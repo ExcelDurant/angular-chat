@@ -4,16 +4,18 @@
       <div class="authBlock">
         <h3>Sign In</h3>
         <div class="formGroup">
-          <input type="text" class="formControl" placeholder="Username" #userName required>
+          <input type="text" class="formControl" placeholder="Username" #userName>
         </div>
   
         <div class="formGroup">
-          <input type="password" class="formControl" placeholder="Password" #userPassword required>
+          <input  type="password" class="formControl" placeholder="Password" #userPassword >
         </div>
   
         <!-- Calling SignIn Api from AuthService -->
         <div class="formGroup">
-          <input type="button" class="btn btnPrimary" value="Log in" (click)="authService.SignIn(userName.value, userPassword.value)">
+          <button type="button" class="btn btnPrimary" value="Log in" (click)="authService.SignIn(userName.value, userPassword.value)">
+            log in
+          </button>
         </div>
   
         <div class="formGroup">
