@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -8,6 +10,7 @@ import { AppComponent } from './app.component';
 import { AngularFireModule, FirebaseOptionsToken } from "@angular/fire";
 import { AngularFireAuthModule } from "@angular/fire/auth";
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireDatabaseModule, AngularFireList} from '@angular/fire/database';
 import { environment } from '../environments/environment';
 
 import { AuthService } from "./shared/services/auth.service";
@@ -18,6 +21,7 @@ import { SignInComponent } from './components/sign-in/sign-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
+import { ChatService } from './shared/services/chat.service';
 
 @NgModule({
   declarations: [
@@ -31,12 +35,15 @@ import { VerifyEmailComponent } from './components/verify-email/verify-email.com
   imports:[
     BrowserModule,
     AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
     AngularFireModule,
-    // AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
     AngularFireAuthModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [AuthService,
+  providers: [AuthService,ChatService,
     { provide: FirebaseOptionsToken, useValue: environment.firebase }],
   bootstrap: [AppComponent]
 })
