@@ -1,0 +1,60 @@
+.displayTable {
+  background-color: rgba(206, 199, 199, 0.699);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.displayTable .displayTableCell {
+  width: 400px;
+  height: 600px;
+  background-color: rgba(245, 245, 245, 0.616);
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.664) 0.55em 0.55em 1em;
+}
+
+.displayTable .authBlock {
+  display: grid;
+  text-align: center;
+  padding: 10px;
+}
+
+.displayTable .authBlock .forgotPassword {
+  color: rgba(0, 0, 255, 0.76);
+}
+
+.displayTable .authBlock h3 {
+  margin-top: 20px;
+  color: rgba(0, 0, 255, 0.76);
+}
+
+.displayTable .authBlock input {
+  cursor: pointer;
+}
+
+.displayTable .authBlock .formControl {
+  border: none;
+  border-bottom: 1px solid blue;
+  width: 100%;
+}
+
+.displayTable .authBlock input,
+.displayTable .authBlock button {
+  padding: 5px;
+  margin: 20px 0px 20px 0px;
+}
+
+.displayTable .authBlock button {
+  color: rgba(0, 0, 255, 0.76);
+}
+
+.displayTable .redirectToLogin {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.displayTable .redirectToLogin .redirect {
+  color: rgba(0, 0, 255, 0.76);
+}

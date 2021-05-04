@@ -27,6 +27,15 @@
             margin-top: 20px;
             color     : rgba(0, 0, 255, 0.76);
         }
+        input{
+            cursor: pointer;
+        }
+
+        .formControl{
+            border: none;
+            border-bottom: 1px solid blue;
+            width: 100%;
+        }
 
         input,
         button {

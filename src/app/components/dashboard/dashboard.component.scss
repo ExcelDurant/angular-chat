@@ -61,7 +61,6 @@
         overflow: hidden;
 
         .msg-container {
-            padding: 20px;
             width: 100%;
             height: 80%;
             overflow: scroll;
@@ -72,8 +71,13 @@
                 background-color: rgba(226, 226, 207, 0.137);
                 list-style: none;
                 .single-msg {
-                    
-                    
+                    text-align: left;
+                    margin-top: 10px;
+                    padding: 5px;
+                    // border: solid rgb(18, 28, 36)  10px;
+                    background-color:rgb(66, 87, 98);
+                    width: 600px;
+                    border-radius: 8px;
                     font-size: 1px;
                     .msg-author {
                         
@@ -96,25 +100,11 @@
                         color: rgba(255, 255, 255, 0.568);
                     }
                 }
-                .single-msg:nth-of-type(even) {
-                    text-align: left;
-                    margin-top: 10px;
-                    padding: 5px;
-                    // border: solid rgb(18, 28, 36)  10px;
-                    background-color:rgb(66, 87, 98);
-                    width: 600px;
-                    border-radius: 8px;
-                }
-                .single-msg:nth-of-type(odd) {
-                    margin-top: 10px;
+                .my-msg {
                     text-align: right;
-                    width: 600px;
-                    padding: 5px;
                     margin-left: 40%;
                     background-color:rgb(7, 92, 81);
-                    // border: solid rgb(18, 28, 36)  10px;
                     
-                    border-radius: 8px;
                 }
             }
         }
