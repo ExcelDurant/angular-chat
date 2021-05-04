@@ -76,7 +76,7 @@
         <!--            ..........                     -->
 
         <ul class="msg-list">
-          <li class="single-msg" *ngFor="let message of messages"><span class="msg-author">{{message.author}}</span> said: <span class="msg-txt">{{ message.text }} <span class="txt-time">at {{ message.time }}</span></span></li>
+          <li class="single-msg" [class.my-msg]="message.author === authService.userData.displayName" *ngFor="let message of messages"><span class="msg-author">{{message.author}}</span> said: <span class="msg-txt">{{ message.text }} <span class="txt-time">at {{ message.time }}</span></span></li>
         </ul>
       </div>
       <form (ngSubmit)="sendMessage()" [formGroup]="messageForm" class="input-container">
