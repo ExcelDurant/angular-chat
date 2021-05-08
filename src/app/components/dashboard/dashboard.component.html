@@ -40,8 +40,8 @@
       <nav class="sidebar">
         <div class="sidebar-sticky">
           <ul class="nav flex-column">
-            <li class="nav-item">
-              <a class="nav-link active">
+             <!-- <li class="nav-item"> -->
+              <!-- <a class="nav-link active">
                 <i class="fas fa-user"></i><strong>User Profile</strong>
               </a>
               <hr>
@@ -52,13 +52,18 @@
               <a class="nav-link active">
                 <i class="fas fa-user"></i><strong>Change Password</strong>
               </a>
-              <hr>
-            </li>
-            <!-- Calling SignOut() Api from AuthService -->
-            <li class="nav-item">
-              <a class="nav-link" (click)="authService.SignOut()">
-                <i class="fas fa-sign-out-alt"></i><strong>Log out</strong>
+              <hr> -->
+            <!-- </li>  -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
               </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">user profile</a>
+                <a class="dropdown-item" href="#">profile setting</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">change Password</a>
+              </div>
             </li>
           </ul>
         </div>
@@ -83,5 +88,5 @@
         <input type="text" name="message" id="message" placeholder="enter a message......" class="msg-field" required formControlName= "message">
         <button type="submit" class="send-btn" [disabled]="!messageForm.valid">send</button>
       </form>
-    </div>
+    </div> 
   </section>
